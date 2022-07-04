@@ -1,0 +1,343 @@
+:root {
+    --Amarillo: #EAC926;
+    --Azul: #03264C;
+    --Celeste: #1259c3;
+    --Gris_oscuro: #666;
+    --Gris_claro: #ebebeb;
+    --Verde: #39b54a;
+    --sombra: rgb(100, 100, 100);
+    --blanco: #fff;
+    --botonActivo: #0022AA;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+body{
+    background-color: var(--Gris_oscuro); 
+    font-family: 'Roboto', sans-serif;
+}
+
+body .banner{
+    margin-bottom: 0px;
+    width: 100%;
+    background-color: var(--Gris_claro);
+}
+
+    body .banner img{
+        width: 100%;
+    }
+
+header{
+    background-color: var(--Amarillo);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    header .logo{
+        width: 50%;
+        padding: 10px;
+    }
+
+    header p{
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+    }
+
+    header .SearchBar{
+        padding: 10px;
+        width: 50%;
+        display: flex;
+        padding: 10px;
+        height: 60px;
+    }
+
+    header .SearchBar input{
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    header .SearchBar button{
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        position: relative;
+    }
+
+    header .SearchBar button i{
+        color: var(--Gris_oscuro);
+        background-color: var(--blanco);
+        border-radius: 50%;
+        font-size: 2em;
+        position: absolute;
+        padding: 5px;
+        right: 2px;
+        top: 4px;
+    }
+
+    header nav .listaMenu{
+        text-align: left;
+        list-style-type: none;
+        padding: 5px;
+        flex-grow: 0.5;
+    }
+
+        header nav .listaMenu a{
+            text-decoration: none;
+            color: black;
+        }
+        
+    header .menuHamburguesa{
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+    }
+
+        header .menuHamburguesa button{
+            background-color: var(--Celeste);
+            color: var(--blanco);
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            padding: 10px;
+        }
+
+        header .menuHamburguesa button i{
+            font-size: 2em;
+        }
+
+
+main{
+    background-color: var(--Gris_claro);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+    main .Titulares{
+        font-size: 24px;
+        color: var(--Gris_oscuro);
+        padding: 10px 0px;
+        width: 100%;
+    }
+
+    main section{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+        main section article{
+            background-color: var(--blanco);
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+            main section article img{
+                width: 100%;
+            }
+
+            main section article .boxArticulo{
+                border-top: solid 1px var(--Gris_claro);
+                padding: 15px;
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+            }
+
+                main section article .boxArticulo i{
+                    color: var(--Verde);
+                    border: solid 1px var(--Verde);
+        
+                    display: block;
+                    font-size: 16px;
+                    padding: 5px;
+                    width: 30px;
+                    height: 30px;
+                    background-color: var(--blanco);
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 20px;
+                    top: -15px;
+                    
+                }
+
+                main section article .boxArticulo p.Precio{
+                    font-size: 18px;
+                    flex-grow : 0.3;
+                    padding: 10px 0px;
+
+                }
+
+                main section article .boxArticulo .Descuento{
+                    font-size: 16px;
+                    color: var(--Verde);
+                    flex-grow : 0.7;
+                    padding: 10px 0px;
+                }
+
+                main section article .boxArticulo .Descripcion{
+                    font-size: 16px;
+                    color: var(--Gris_oscuro);
+                    padding-bottom: 15px;
+                    margin-bottom: 0px;
+                    width: 100%;
+                    padding: 10px 0px;
+                    display: none;
+                }
+
+footer{
+    background-color: var(--blanco);
+    text-align: center;
+    color: var(--Gris_oscuro);  
+}
+
+    footer section{
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        padding-top: 40px;
+        padding-bottom: 10px;
+        
+
+    }
+
+        footer section h3{
+            font-size: 16px;
+            font-style: bold;
+        }
+        
+
+        footer section i{
+            font-size: 2em;
+            padding-bottom: 10px;
+            color: var(--Celeste);
+        }
+
+    footer .Copyright{
+        width: 100%;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    @media (max-width: 361px){
+        header nav .listaMenu{
+            display: none;
+        }
+
+        main section article{
+            width: 90%;
+            box-shadow: 0px 0px 10px var(--sombra);
+        }
+
+    }
+
+    @media (min-width: 361px){
+        header{
+            align-items: center;
+        }
+
+        header .menuHamburguesa{
+            display: none;
+        }
+
+        header nav{
+            width: 100%;
+            display: flex;
+
+        }
+
+        header .listaMenu{
+            display: flex;
+            flex-grow: 0.5;
+        }
+
+        header .listaMenu li{
+            padding-left: 5px ;
+            padding-right: 5px;
+        }
+        header .listaMenu:nth-child(2){
+            justify-content: flex-end;
+        }
+
+
+
+        main section article{
+            width: 40%;
+        }
+
+        footer section{
+            width: 50%;
+        }
+
+
+
+    }
+    @media (min-width: 769px){
+        main section article{
+            width: 20%;
+        }
+
+        header .logo{
+            width: 30%;
+            flex-grow: 0.3;
+        }
+
+        header .SearchBar{
+            width: 30%;
+            flex-grow: 0.3;
+        }
+
+        header p{
+            width: 30%;
+            flex-grow: 0.3;
+        }
+
+        main section article .boxArticulo:hover .Descripcion{
+            display: block;
+        }
+
+        main section article:hover{
+            box-shadow: 0px 0px 10px var(--sombra);
+        }
+
+        main section article .boxArticulo i:hover{
+            transform: rotate(-90deg);
+            transition: all 400ms;
+        }
+
+        footer{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        footer section{
+            width: 30%;
+        }
+
+        footer section.Copyright{
+            width: 100%;
+        }
+
+        footer i:hover{
+            color: var(--botonActivo);
+            padding: 5px;
+            border: 1px solid var(--botonActivo);
+            border-radius: 50%;
+        }
+
+    }
