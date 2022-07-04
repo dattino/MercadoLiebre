@@ -54,30 +54,29 @@ header{
         width: 50%;
         display: flex;
         padding: 10px;
-        height: 60px;
     }
 
     header .SearchBar input{
         width: 100%;
-        border-radius: 15px;
+        border-radius: 5px 0 0 5px;
+        border: none;
+        outline: none;
+        padding-left: 10px;
     }
 
     header .SearchBar button{
-        border-radius: 5px;
+        border-radius: 0 5px 5px 0;
+        background-color: var(--blanco);
         border: none;
         outline: none;
-        position: relative;
+        border-left: 1px solid var(--Gris_claro);
+        padding: 5px;
     }
 
     header .SearchBar button i{
         color: var(--Gris_oscuro);
         background-color: var(--blanco);
-        border-radius: 50%;
-        font-size: 2em;
-        position: absolute;
-        padding: 5px;
-        right: 2px;
-        top: 4px;
+        font-size: 1em;
     }
 
     header nav .listaMenu{
@@ -144,6 +143,7 @@ main{
             flex-wrap: wrap;
             margin-left: auto;
             margin-right: auto;
+            box-shadow: 0px 0px 10px var(--sombra);
         }
 
             main section article img{
@@ -237,21 +237,19 @@ footer{
         header nav .listaMenu{
             display: none;
         }
-
+        
         main section article{
             width: 90%;
-            box-shadow: 0px 0px 10px var(--sombra);
         }
-
     }
 
     @media (min-width: 361px){
-        header{
-            align-items: center;
+        header nav .listaMenu{
+            display: none;
         }
 
-        header .menuHamburguesa{
-            display: none;
+        header{
+            align-items: center;
         }
 
         header nav{
@@ -277,18 +275,29 @@ footer{
 
         main section article{
             width: 40%;
+            flex-grow: 0.45;
         }
 
         footer section{
             width: 50%;
         }
-
-
-
     }
+
+    @media (min-width: 526px){
+        header nav .listaMenu{
+            display: flex;
+        }
+
+        header .menuHamburguesa{
+            display: none;
+        }
+    }
+
     @media (min-width: 769px){
         main section article{
-            width: 20%;
+            width: 15%;
+            flex-grow: 0.2;
+            box-shadow: none;
         }
 
         header .logo{
@@ -306,7 +315,7 @@ footer{
             flex-grow: 0.3;
         }
 
-        main section article .boxArticulo:hover .Descripcion{
+        main section article:hover .boxArticulo .Descripcion{
             display: block;
         }
 
