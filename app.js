@@ -8,7 +8,7 @@ app.use( express.static(publicPath) );
 
 const port = process.env.PORT || 3030;
 
-app.listen( port, () => console.log('Servidor corriendo in port' ${port}) );
+app.listen( port, () => console.log(`Servidor corriendo in port ${port}`) );
 
 app.get('/404', (req, res) => {
     res.send("Error página no encontrada");
