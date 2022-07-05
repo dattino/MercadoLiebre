@@ -6,7 +6,9 @@ const app = express();
 const publicPath = path.join(__dirname, 'public');
 app.use( express.static(publicPath) );
 
-app.listen( 3030, () => console.log('Servidor corriendo') );
+const port = process.env.PORT || 3030;
+
+app.listen( port, () => console.log('Servidor corriendo in port' ${port}) );
 
 app.get('/404', (req, res) => {
     res.send("Error página no encontrada");
