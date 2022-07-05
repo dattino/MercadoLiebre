@@ -317,7 +317,6 @@ footer{
 
         header p{
             width: 25%;
-            flex-grow: 0.4;
             text-align: right;
             padding-right: 10px;
 
