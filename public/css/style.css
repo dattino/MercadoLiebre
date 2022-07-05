@@ -36,6 +36,7 @@ header{
     background-color: var(--Amarillo);
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
     header .logo{
@@ -260,7 +261,9 @@ footer{
 
         header .listaMenu{
             display: flex;
+            justify-content: flex-start;
             flex-grow: 0.5;
+            padding-left: 10px;
         }
 
         header .listaMenu li{
@@ -269,6 +272,8 @@ footer{
         }
         header .listaMenu:nth-child(2){
             justify-content: flex-end;
+            flex-grow: 0.5;
+            padding-right: 5px;
         }
 
 
@@ -283,7 +288,7 @@ footer{
         }
     }
 
-    @media (min-width: 526px){
+    @media (min-width: 540px){
         header nav .listaMenu{
             display: flex;
         }
@@ -306,13 +311,16 @@ footer{
         }
 
         header .SearchBar{
-            width: 30%;
-            flex-grow: 0.3;
+            width: 20%;
+            flex-grow: 0.2;
         }
 
         header p{
-            width: 30%;
-            flex-grow: 0.3;
+            width: 25%;
+            flex-grow: 0.4;
+            text-align: right;
+            padding-right: 10px;
+
         }
 
         main section article:hover .boxArticulo .Descripcion{
