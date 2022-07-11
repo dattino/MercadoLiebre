@@ -49,11 +49,11 @@
             <form >
                 <div class="nombre_y_usuario">
                     <h4>Nombre y Apellido</h4>
-                        <input class="campo" type="text" name="nombre-y-apellido" id="nombre-y-apellido" placeholder="Nombre y Apellido" required>
+                        <input class="campo" type="text" name="nombre-y-apellido" id="nombre-y-apellido" placeholder="Nombre y Apellido" minlength="3" required>
                         <span class="feedback"></span>
 
                     <h4>Usuario</h4>
-                        <input class="campo" type="text" name="usuario" id="usuario" placeholder="Nombre de usuari@" required>
+                        <input class="campo" type="email" name="usuario" id="usuario" placeholder="Nombre de usuari@" minlength="3" required>
                         <span class="feedback"></span>
                 </div>
                 
@@ -63,7 +63,7 @@
                         <span class="feedback"></span>
 
                     <h4>Domicilio</h4>
-                        <input class="campo" type="text" name="domicilio" id="domicilio" placeholder="Domicilio" required>
+                        <input class="campo" type="text" name="domicilio" id="domicilio" placeholder="Domicilio" minlength="3" required>
                         <span class="feedback"></span>
                 </div>
 
@@ -119,18 +119,16 @@
 
                 <div class="password">
                     <h4>Contraseña</h4>
-                        <input class="campo" type="password" name="pasword" id="password" required>
+                        <input class="campo" type="password" name="pasword" id="password" minlength="8" alt="strongPass" required>
                         <span class="feedback"></span>
 
                     <h4>Confirmar contraseña</h4>
-                        <input class="campo" type="password" name="pasword" id="password" required>
+                        <input class="campo" type="password" name="pasword" id="password" minlength="8" alt="strongPass" required>
                         <span class="feedback"></span>
                 </div>
 
                 <div class="botones">
-                    <a href="/">
-                        <button type="button">Enviar</button>
-                    </a>
+                    <button type="submit">Enviar</button>
                     <button type="reset" action="/">Borrar</button>
                 </div>
             </form>

@@ -50,16 +50,14 @@
             <form action="">
                 <div class="nombre_y_usuario">
                     <h4>Usuario</h4>
-                    <p><input class="campo" type="text" name="usuario" id="usuario" placeholder="Nombre de usuari@" required></p>
+                    <p><input class="campo" type="text" name="usuario" id="usuario" placeholder="Nombre de usuari@" minlength="3"required></p>
                 </div>
                 <div class="password">
                         <h4>Contraseña</h4>
-                        <input class="campo" type="password" name="pasword" id="password" required>
+                        <input class="campo" type="password" name="pasword" id="password" minlength="8" required>
                 </div>
                 <div class="botones">
-                    <a href="/">
-                        <button type="button">Enviar</button>
-                    </a>
+                    <button type="submit">Enviar</button>
                 </div>
             </form>
         </main>
